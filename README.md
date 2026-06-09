@@ -21,4 +21,4 @@ The users will be people who want to quickly view friends posts and send message
 
 
 # entity relationship diagram
-![ERD](images\erd.png)
+![ERD](images/erd.png)
