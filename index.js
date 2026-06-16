@@ -1,16 +1,21 @@
 const express = require("express");
+const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+mongoose.connect(process.env.dbURL)
+  .then(() => console.log("DB Connected!!"))
+  .catch(error => console.log(error));
 
-app.get("/", (req, res) => {
-  res.send("App server is running");
-});
+const userRoutes = require("./routes/user");
+const postRoutes = require("./routes/post");
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is running on port 3000");
 });
