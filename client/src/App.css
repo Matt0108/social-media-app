@@ -1,0 +1,35 @@
+body {
+  background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  margin-top: 50px;
+}
+
+h1 {
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.lead {
+  color: #555;
+}
+
+.form-card {
+  padding: 25px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 25px;
+  background-color: white;
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
